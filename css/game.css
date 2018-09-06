@@ -1,0 +1,181 @@
+body {
+	background-image: url("images/paisaje.gif");
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-attachment: fixed;
+	background-size: cover;
+	font-family: Modern Antiqua;
+}
+
+p { /* SACA EL PADDING PARA QUE SE VEA MÁS CÓMODO */ 
+	margin-bottom: 0px;
+}
+
+.container-fluid  div[class^="col"] { /* ESPECIFICACIONES DE LOS CONTENEDORES COL */
+	text-align: center;
+	color: white;
+}
+.gif-personaje.seleccionado{
+	border: 10px solid black;
+}
+#btn-middle{
+	display: none;
+}
+#tabla-jugadores { /* TABLA SUPERIOR CON INFORMACIÓN DE JUGADORES Y BOTÓN ATRÁS */
+	background-image: url("images/madera1.jpg");
+	border-bottom: 2px solid black;
+}
+	#retroceder { /* BOTÓN DE ATRÁS */
+		font-size: 3vw;
+		padding-left: 0px;
+		top: 4vh;
+	}
+	.icon-previous {
+		color: white;
+	}
+		.info-jugadores {} /* NOMBRE JUGADORES */	
+		#info-j1 {
+			border-right: 1px solid black;
+			animation: mover-info-j1 3.5s;
+	    	animation-fill-mode: forwards;
+			} /* INFORMACIÓN JUGADOR 1 */
+		#info-j2 {
+			border-left: 1px solid black;
+			animation: mover-info-j2 3.5s;
+	    	animation-fill-mode: forwards;			
+			} /* INFORMACIÓN JUGADOR 2 */
+		.racha { /* RACHA JUGADORES */
+			padding-left: 0px;
+			padding-right: 0px;
+			animation: aparecer-anuncio 2s ease-out;
+			animation-fill-mode: forwards;
+		}
+			.contenedor-vida { /* VIDA DE AMGOS JUGADORES */
+				display: flex;
+				justify-content: space-around;
+			}
+				.icon-heart { /* VIDA DE AMBOS JUGADORES EN FORMA DE CORAZONES, SON 3 */
+					color: red;
+				}
+				.icon-heart-broken {
+					color: grey;
+				}
+
+#anuncio { /* TÍTULO */
+	background-image: url("images/fondo-h2.gif");
+	border: 3px solid green;
+	border-radius: 5px;
+	font-size: 7vh;
+	animation: aparecer-anuncio 2s ease-out, desaparecer-anuncio 1s ease-out 8s;
+	animation-fill-mode: forwards;
+}
+		.temporizador {
+		background-image: url("images/fondo-h2.gif");
+		border: 1px solid black;
+		font-size: 7vh;
+	}
+
+.resultado { /* RESULTADO DE LA PELEA */
+	height: 21.5vh;
+}
+	#cartelj1, #cartelj2 {
+		border: 2px solid #492C02;
+		padding: 0px;
+		border-radius: 15px;
+		animation-name: victoria;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+	}
+
+.gif-personaje { /* CONTENEDORRES DE LOS PERSONAJES */
+	animation: aparecer-contenedor 2s ease-out, desaparecer-contenedor 2s ease-out 7s;
+}
+	/*#papel {
+		animation-fill-mode: forwards;
+	}*/
+	
+	
+	/* BOTONES REINICIAR Y CONTINUAR */
+.reiniciar, .continuar {
+	background-image: url(images/fondo-h2.gif);
+    color: white;
+    width: 20vw;
+    height: 10vh;
+}
+
+/*   ---------------    ANIMACIONES    --------------- */ 
+/*   ---------------    ANIMACIONES    --------------- */ 
+
+
+@keyframes mover-info-j1 { /* ANIMACIÓN PARA ACOMODAR INFO DE JUGADORES AL INICIAR JUEGO */
+    from {left: -16vw;}
+    to {left: 0px;}
+}
+@keyframes mover-info-j2 {
+    from {right: -16vw;}
+    to {right: 0px;}
+}
+
+
+@keyframes aparecer-contenedor { /* ANIMACIÓN DE OPACIDAD PARA LOS CONTENEDORES */
+    0% {
+        opacity: 0;
+    }
+    0.1% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes desaparecer-contenedor { /* ANIMACIÓN DE OPACIDAD PARA LOS CONTENEDORES */
+		    0% {					
+    		    opacity: 1;
+		    }
+		    1% {
+		        opacity: 1;
+		    }
+		    100% {
+		        opacity: 0;
+		    }
+}
+
+@keyframes aparecer-anuncio { /* ANIMACIÓN DE OPACIDAD PARA H2 */
+    0% {
+    	position: relative;
+        top: -150px;
+    }
+    1% {
+    	position: relative;
+    }
+    100% {
+    	position: relative;
+        top: 0px;
+    }
+}
+		@keyframes desaparecer-anuncio { /* ANIMACIÓN DE OPACIDAD PARA H2  */
+		    0% {					
+    		    opacity: 1;
+		    }
+		    1% {
+		        opacity: 1;
+		    }
+		    100% {
+		        opacity: 0;
+		    }
+		}
+		
+		@keyframes victoria {	/* ANIMACIÓN DE VICTORIA */
+
+		  50% {
+		    transform: scale(1.2);
+		    opacity: 1;
+		  }
+		  100% {
+		    transform: scale(1);
+		    opacity:0.5;
+		  }
+		}

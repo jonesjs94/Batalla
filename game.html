@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PPT Game</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<!-- Font Family de Google -->
+	<link href="https://fonts.googleapis.com/css?family=Modern+Antiqua" rel="stylesheet">
+
+	<!-- Local CSS -->
+	<link rel="stylesheet" type="text/css" href="css/game.css">
+	<link rel="stylesheet" type="text/css" href="css/iconos/iconos.css">
+</head>
+<body onload="mostrarCookie(); musicaPelea()">
+	<audio id="audioPelea" src="css/audio/battleForCamelot.mp3"></audio>
+	<div class="container-fluid">
+		<div id="tabla-jugadores" class="row"> <!-- TABLA SUPERIOR CON INFORMACIÓN DE JUGADORES -->
+
+			<div id="retroceder" class="col-1"> <!-- BOTÓN ATRÁS -->
+				<a href="menu.html"><span class="icon-previous"></span></a>
+			</div>
+
+			<div class="col-1 racha"><!-- RACHA JUGADOR 1 -->
+				<p>Racha</p>
+				<p id="racha-j1">00</p>
+			</div>
+			<div id="info-j1" class="col-4 info-jugadores"> <!-- INFO JUGADOR 1 -->
+				<p id="nombre-j1" class="nombre-jugadores">Jugador1</p>
+				<div id="vidas-j1" class="contenedor-vida">
+					<div><span id="vida1-j1" class="icon-heart"></span></div>
+					<div><span id="vida2-j1" class="icon-heart"></span></div>
+					<div><span id="vida3-j1" class="icon-heart"></span></div>
+				</div>	
+			</div>
+
+			<div id="info-j2" class="col-4 info-jugadores"> <!-- INFO JUGADOR 2 -->
+				<p id="nombre-j2" class="nombre-jugadores">Jugador2</p>
+				<div id="vidas-j2" class="contenedor-vida">
+					<div><span id="vida1-j2" class="icon-heart"></span></div>
+					<div><span id="vida2-j2" class="icon-heart"></span></div>
+					<div><span id="vida3-j2" class="icon-heart"></span></div>
+				</div>	
+			</div>
+			<div class="col-1 racha"> <!-- RACHA JUGADOR 2 -->
+				<p>Racha</p>
+				<p id="racha-j2">00</p>
+			</div>
+			<div class="col-1"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-2 temporizador tempo1"></div>			
+				<div class="col-8">
+					<p id="anuncio"><span id="nombrePJ"></span> elija su campeón<br></p>
+				</div>
+			<div class="col-2 temporizador tempo2"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-5 resultado">
+				<img id="cartelj1" src="" class="img-fluid"></img>
+			<!-- IMG DE RESULTADO DE LA PELEA. Se debe colocar src y en el RESET sacarle el url -->
+			</div>
+			
+			<div class="col-2"></div>
+			
+			<div class="col-5 resultado">
+				<img id="cartelj2" src="" class="img-fluid"></img>
+			<!-- IMG DE RESULTADO DE LA PELEA. Se debe colocar src y en el RESET sacarle el url -->	
+			</div>
+		</div>
+
+		<div id="personajes" class="row"> <!-- CONTENEDOR INFERIOR DE PERSONAJES Y DESARROLLO DE PELEA -->
+			<div id="piedra" class="col-4 gif-personaje gif-jugador"> <!-- GIF DE PIEDRA Y CONTENEDOR DE JUGADOR 1 -->
+				<img id="img-j1" src="css/images/piedra-frente.gif" class="img-fluid">
+			</div>
+			<div id="papel" class="col-4 gif-personaje"> <!-- GIF DE PAPEL -->
+				<img id="img-middle" src="css/images/papel-frente.gif" class="img-fluid">
+			</div>
+			<div id="btn-middle" class="col-4">
+					<button class="reiniciar">Reiniciar</button>
+					<button class="continuar">Continuar</button>
+				</div>
+			<div id="tijera" class="col-4 gif-personaje gif-jugador"> <!-- GIF DE TIJERA Y CONTENEDOR DE JUGADOR 2 -->
+				<img id="img-j2" src="css/images/tijera-frente.gif" class="img-fluid"> 
+			</div>
+		</div>
+	</div>
+
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.slim.min.js"> </script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"> </script>
+    <script src="js/game.js"></script>
+    <script src="js/musica.js"></script>
+  </body>
+</html>

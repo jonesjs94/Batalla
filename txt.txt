@@ -1,0 +1,15 @@
+svg (Gráficos vectoriales escalables): es una forma de crear animaciones 
+viewbox: lugar donde se ubica la animacion (x y ancho alto)
+g: contenedor -> xlink:href (asociamos con el simbolo/objeto/forma) 
+en el css (esta al final de la hoja), le aplicas la animacion 
+stroke(trazo) le asigna un color al borde del objeto 
+nth-child(n) es como cuando en javascript traiamos una clase que estaba asignada a muchas etiquetas, vos le indicabas con [n] a
+cual de todas esas clases querias modificar 
+
+para darle diferente estilo a los input del formulario se puede hacer
+input[type="submit / text / radio"]{
+}
+
+Eso es lo unico nuevo en la parte de css (o por lo menos que yo no sabia)
+
+centramos todo con: text-align:center que colocamos en el contenedor principal

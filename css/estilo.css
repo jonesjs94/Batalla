@@ -1,0 +1,195 @@
+body{
+  background-image: url("images/fondo1.jpg");
+  background-size: 100%;
+  color: #ece2e2;
+}
+h2{
+  margin-top: 10%;
+  text-align: center;
+  font-family: Modern Antiqua;
+}
+.init{
+  text-align: center;
+
+  font-size: 50px;
+}
+.texto1{
+  font-family: Modern Antiqua;
+  font-size: 20px;
+}
+input{
+
+  border:none;
+  
+}
+input[type="submit"]{
+  margin-top: 10%;
+  border: solid 0.5px;
+  border-radius: 10px;
+  font-family: Modern Antiqua;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ece2e2;
+}
+input[type="text"]{
+  border-radius: 5px;
+  background-color: rgba(37, 84, 18, 0.5);
+  color: white;
+  text-align: center;
+}
+
+#nameus {
+  font-size: 20px;
+  font-family: Modern Antiqua;
+  
+}
+label{
+  font-size: 16px;
+}
+/** Menu **/
+
+article{
+  text-align: center;
+}
+
+
+
+/*
+.botonvs1, .botonvs2{
+  width: 20vh;
+  font-size: 13px;
+
+}
+.botonvs1{
+  border-radius: 10px 0px 0px 10px;
+  -moz-border-radius: 10px 0px 0px 10px;
+  -webkit-border-radius: 10px 0px 0px 10px;
+  border-right: 1px solid;
+  margin:0;
+}
+.botonvs2{
+  border-radius: 0px 10px 10px 0px;
+  -moz-border-radius: 0px 10px 10px 0px;
+  -webkit-border-radius: 0px 10px 10px 0px;
+  border-left: 1px solid;
+  margin:20px 0;
+}*/
+button{
+  width: 40vh;
+  height: 7vh;
+  border: solid 0.5px;
+  border-radius: 10px;
+  margin:30px;
+  font-family: Modern Antiqua;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+/** como **/
+.letracomo{
+  font-size: 13px;
+  font-weight: bold;
+  text-align: justify;
+  font-family: Modern Antiqua;
+}
+.imagenexp{
+  width: 20vh;
+}
+.btncomo{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  border-radius: 0;
+  font-size: 20px;
+}
+
+.contcomo{
+  text-align: center;
+  margin: 0 10%;
+}
+
+/** online **/
+
+.contprep{
+  text-align: center;
+}
+
+.nombre {
+  position: relative;
+  font-size: 2em;
+}
+
+.nombre .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 0.2em 0;
+  overflow: hidden;
+  height: 30px;
+}
+
+.nombre .letter {
+  display: inline-block;
+  line-height: 1em;
+  font-family: Modern Antiqua;
+}
+
+.botonprep{
+ margin-top:0; 
+}
+/** prepara2 **/
+h3{
+  font-family: Modern Antiqua;
+  margin-top: 10%;
+}
+.gif{
+  width: 50vh;
+}
+.comenzar{
+  visibility: hidden;
+}
+/** index animacion **/
+svg {
+    display: block;
+    font: 16em 'Montserrat';
+    margin: 0 auto;
+  
+}
+
+.text-copy {                      
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0px;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: #009688;
+	animation-delay: -1s;
+}
+
+.text-copy:nth-child(2){
+	stroke: #FFC107;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #4CAF50;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #607D8B;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #8BC34A;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+
